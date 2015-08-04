@@ -22,7 +22,6 @@ alias svpn="killall ssh;  ssh -fNC malbec && ssh -fNC albatros && ssh -fNC ssug1
 
 cal -3
 
-
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Devel
 VIRTUALENVWRAPPER_PYTHON='/usr/bin/python3' # This needs to be placed before the virtualenvwrapper command
