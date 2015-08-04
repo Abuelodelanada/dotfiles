@@ -1,0 +1,29 @@
+[diff]
+	tool = meld
+
+[user]
+	name = Jose C. Massón
+	email = jose@gcoop.coop
+[color]
+       diff = auto
+       status = auto
+       branch = auto
+       ui = true
+[branch]
+        autosetuprebase = always
+
+[core]
+        pager = less
+
+[format]
+        pretty = %Cred%h%Creset %C(bold blue)<%an>%Creset - %C(yellow)%d%Creset %s %Cgreen(%cr)
+[push]
+	default = matching
+
+[alias]
+    st = status
+    ci = commit
+    co = checkout
+    br = branch
+    unstage = reset HEAD --
+    last = log -20 --graph --stat HEAD
