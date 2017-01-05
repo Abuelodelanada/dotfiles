@@ -1,4 +1,4 @@
-;; Packages repository
+;;; Packages repository
 (require 'package)
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.org/packages/") t)
@@ -123,7 +123,7 @@
 ;;;;;;;;;;;;;;;;; Customizaciones José  ;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;; Code:
-(set-default-font "Ubuntu Mono 10")
+(set-frame-font "Ubuntu Mono 10")
 
 ;; Acentos
 (require 'iso-transl)
@@ -328,3 +328,6 @@ buffer read-only, so I suggest setting kill-read-only-ok to t."
 
 ;http://www.flycheck.org/en/latest/user/quickstart.html#enable-flycheck
 (add-hook 'after-init-hook #'global-flycheck-mode)
+
+(provide '.emacs)
+;;; .emacs ends here
