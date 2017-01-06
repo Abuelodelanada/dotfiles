@@ -16,7 +16,7 @@
 (setq auto-save-default nil) ;; Stop creating auto #autosave# files
 
 ;; Modes
-(global-linum-mode 1) ;; Show line-number
+(global-nlinum-mode 1) ;; Show line-number
 (setq linum-format "%d ") ;; Separating line numbers from text
 (tool-bar-mode -1) ;; Hide toolbar
 (scroll-bar-mode -1) ;; Hide scrollbar
@@ -313,21 +313,31 @@ buffer read-only, so I suggest setting kill-read-only-ok to t."
 (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
 (setq highlight-indent-guides-method 'character)
 
-;https://github.com/syohex/emacs-git-gutter
-(global-git-gutter-mode +1)
-(git-gutter:linum-setup)
-(custom-set-variables
- '(git-gutter:update-interval 1))
-
-
-(custom-set-variables
- '(git-gutter:modified-sign " M ")
- '(git-gutter:added-sign " + ")
- '(git-gutter:deleted-sign " - "))
+; https://github.com/dgutov/diff-hl
+(global-diff-hl-mode)
 
 
 ;http://www.flycheck.org/en/latest/user/quickstart.html#enable-flycheck
+(setq flycheck-highlighting-mode 'lines)
 (add-hook 'after-init-hook #'global-flycheck-mode)
+(setq flycheck-check-syntax-automatically '(mode-enabled save))
+
+
+
+;autocomplete braces brackets etc
+(electric-pair-mode 1)
+    (defun electric-pair ()
+      "If at end of line, insert character pair without surrounding spaces.
+    Otherwise, just insert the typed character."
+      (interactive)
+      (if (eolp) (let (parens-require-spaces) (insert-pair)) (self-insert-command 1)))
+;do not autocomplete if next character aint blank
+(setq electric-pair-preserve-balance nil)
+
+(push '(?\' . ?\') electric-pair-pairs) ; Automatically pair single-quotes
+(push '(?{ . ?}) electric-pair-pairs) ; Automatically pair {}
+(push '(?` . ?`) electric-pair-pairs) ; Automatically pair ``
+(push '(?\' . ?\') electric-pair-text-pairs) ; ... in comments
 
 (provide '.emacs)
 ;;; .emacs ends here
