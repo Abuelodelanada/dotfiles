@@ -123,7 +123,7 @@
 ;;;;;;;;;;;;;;;;; Customizaciones José  ;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;; Code:
-(set-frame-font "Ubuntu Mono 10")
+(set-frame-font "Ubuntu Mono 11")
 
 ;; Acentos
 (require 'iso-transl)
@@ -205,7 +205,7 @@ buffer read-only, so I suggest setting kill-read-only-ok to t."
 ;; ido mode
 (ido-mode 1)
 (setq ido-enable-flex-matching t)
-(setq ido-use-filename-at-point 'guess)
+(setq ido-use-filename-at-point t) ;; prefer file names near point
 
 ;; Powerline
 (require 'powerline)
@@ -338,6 +338,22 @@ buffer read-only, so I suggest setting kill-read-only-ok to t."
 (push '(?{ . ?}) electric-pair-pairs) ; Automatically pair {}
 (push '(?` . ?`) electric-pair-pairs) ; Automatically pair ``
 (push '(?\' . ?\') electric-pair-text-pairs) ; ... in comments
+
+
+;dumb-jump
+(dumb-jump-mode 1)
+
+; re-open previoud buffers
+(desktop-save-mode 1)
+
+
+; xml-format
+(defun xml-format ()
+  (interactive)
+  (save-excursion
+    (shell-command-on-region (mark) (point) "xmllint --format -" (buffer-name) t)
+    )
+  )
 
 (provide '.emacs)
 ;;; .emacs ends here
