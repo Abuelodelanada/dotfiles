@@ -321,23 +321,6 @@ buffer read-only, so I suggest setting kill-read-only-ok to t."
 (setq flycheck-check-syntax-automatically '(mode-enabled save))
 
 
-
-;autocomplete braces brackets etc
-(electric-pair-mode 1)
-    (defun electric-pair ()
-      "If at end of line, insert character pair without surrounding spaces.
-    Otherwise, just insert the typed character."
-      (interactive)
-      (if (eolp) (let (parens-require-spaces) (insert-pair)) (self-insert-command 1)))
-;do not autocomplete if next character aint blank
-(setq electric-pair-preserve-balance nil)
-
-(push '(?\' . ?\') electric-pair-pairs) ; Automatically pair single-quotes
-(push '(?{ . ?}) electric-pair-pairs) ; Automatically pair {}
-(push '(?` . ?`) electric-pair-pairs) ; Automatically pair ``
-(push '(?\' . ?\') electric-pair-text-pairs) ; ... in comments
-
-
 ;dumb-jump
 (dumb-jump-mode 1)
 
