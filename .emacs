@@ -7,8 +7,6 @@
   (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
 (package-initialize)
 
-
-
 ;; Global settings
 (setq inhibit-startup-message t) ;; Disable startup messages
 (add-to-list 'default-frame-alist '(fullscreen . maximized)) ;; Maximize window at startup
@@ -16,11 +14,11 @@
 (setq auto-save-default nil) ;; Stop creating auto #autosave# files
 
 ;; Modes
-(global-nlinum-mode 1) ;; Show line-number
 (defun initialize-nlinum (&optional frame)
   (require 'nlinum)
   (add-hook 'prog-mode-hook 'nlinum-mode))
 (when (daemonp) (add-hook 'window-setup-hook 'initialize-nlinum))
+(global-nlinum-mode 1) ;; Show line-number
 
 (tool-bar-mode -1) ;; Hide toolbar
 (scroll-bar-mode -1) ;; Hide scrollbar
@@ -345,6 +343,7 @@ buffer read-only, so I suggest setting kill-read-only-ok to t."
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 (require 'jquery-doc)
 (add-hook 'js2-mode-hook 'jquery-doc-setup)
+(add-hook 'js2-mode-hook 'ac-js2-mode)
 
 (provide '.emacs)
 ;;; .emacs ends here
