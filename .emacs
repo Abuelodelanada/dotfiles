@@ -353,5 +353,9 @@ buffer read-only, so I suggest setting kill-read-only-ok to t."
     )
   )
 
+; highlight current line
+(require 'hl-line+)
+(toggle-hl-line-when-idle 1)
+
 (provide '.emacs)
 ;;; .emacs ends here
