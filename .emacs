@@ -17,7 +17,11 @@
 
 ;; Modes
 (global-nlinum-mode 1) ;; Show line-number
-(setq linum-format "%d ") ;; Separating line numbers from text
+(defun initialize-nlinum (&optional frame)
+  (require 'nlinum)
+  (add-hook 'prog-mode-hook 'nlinum-mode))
+(when (daemonp) (add-hook 'window-setup-hook 'initialize-nlinum))
+
 (tool-bar-mode -1) ;; Hide toolbar
 (scroll-bar-mode -1) ;; Hide scrollbar
 (menu-bar-mode -1) ;; Hide menubar
@@ -104,12 +108,6 @@
   (yank)
   (back-to-indentation))
 
-;; Disable linum for certain modes
-(setq linum-mode-inhibit-modes-list '(shell-mode eshell-mode term-mode multi-term dired-mode doc-view-mode))
-(defadvice linum-on (around linum-on-inhibit-for-modes)
-    (unless (member major-mode linum-mode-inhibit-modes-list)
-      ad-do-it))
-(ad-activate 'linum-on)
 
 (defun edit-current-file-as-root ()
   "Edit the file that is associated with the current buffer as root"
