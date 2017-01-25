@@ -155,6 +155,7 @@
 ; Theme
 (setq monokai-background "#000000")
 (load-theme 'monokai t)
+(set-cursor-color "#d2ff27")
 
 ;; keyboard scroll one line at a time
 (setq scroll-step 1)
@@ -318,7 +319,7 @@ buffer read-only, so I suggest setting kill-read-only-ok to t."
 ;http://www.flycheck.org/en/latest/user/quickstart.html#enable-flycheck
 (setq flycheck-highlighting-mode 'lines)
 (add-hook 'after-init-hook #'global-flycheck-mode)
-(setq flycheck-check-syntax-automatically '(mode-enabled save))
+
 
 
 ;dumb-jump
@@ -339,6 +340,10 @@ buffer read-only, so I suggest setting kill-read-only-ok to t."
 ; highlight current line
 (require 'hl-line+)
 (toggle-hl-line-when-idle 1)
+
+
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+
 
 (provide '.emacs)
 ;;; .emacs ends here
