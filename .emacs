@@ -343,7 +343,8 @@ buffer read-only, so I suggest setting kill-read-only-ok to t."
 
 
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
-
+(require 'jquery-doc)
+(add-hook 'js2-mode-hook 'jquery-doc-setup)
 
 (provide '.emacs)
 ;;; .emacs ends here
