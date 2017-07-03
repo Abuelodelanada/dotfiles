@@ -318,14 +318,8 @@ buffer read-only, so I suggest setting kill-read-only-ok to t."
 (setq flycheck-highlighting-mode 'lines)
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
-
-
 ;dumb-jump
 (dumb-jump-mode 1)
-
-; re-open previoud buffers
-(desktop-save-mode 1)
-
 
 ; xml-format
 (defun xml-format ()
@@ -344,6 +338,10 @@ buffer read-only, so I suggest setting kill-read-only-ok to t."
 (require 'jquery-doc)
 (add-hook 'js2-mode-hook 'jquery-doc-setup)
 (add-hook 'js2-mode-hook 'ac-js2-mode)
+
+; Geben
+(autoload 'geben "geben" "DBGp protocol frontend, a script debugger" t)
+
 
 (provide '.emacs)
 ;;; .emacs ends here
