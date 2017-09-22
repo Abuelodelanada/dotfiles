@@ -14,11 +14,11 @@
 (setq auto-save-default nil) ;; Stop creating auto #autosave# files
 
 ;; Modes
-(defun initialize-nlinum (&optional frame)
-  (require 'nlinum)
-  (add-hook 'prog-mode-hook 'nlinum-mode))
-(when (daemonp) (add-hook 'window-setup-hook 'initialize-nlinum))
-(global-nlinum-mode 1) ;; Show line-number
+(defun initialize-linum (&optional frame)
+  (require 'linum)
+  (add-hook 'prog-mode-hook 'linum-mode))
+(when (daemonp) (add-hook 'window-setup-hook 'initialize-linum))
+(global-linum-mode 1) ;; Show line-number
 
 (tool-bar-mode -1) ;; Hide toolbar
 (scroll-bar-mode -1) ;; Hide scrollbar
@@ -119,7 +119,9 @@
 ;;;;;;;;;;;;;;;;; Customizaciones José  ;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;; Code:
-(set-frame-font "Ubuntu Mono 11")
+;(set-frame-font "Ubuntu Mono 11")
+(set-frame-font "Ubuntu Mono derivative Powerline 11")
+;(set-frame-font "Monaco 10")
 
 ;; Acentos
 (require 'iso-transl)
@@ -238,6 +240,9 @@ buffer read-only, so I suggest setting kill-read-only-ok to t."
       (ecb-methods-buffer-name 0.22784810126582278 . 0.5833333333333334)
       (ecb-history-buffer-name 0.22784810126582278 . 0.20833333333333334)))))
  '(ecb-options-version "2.50")
+ '(package-selected-packages
+   (quote
+    (yaml-mode smarty-mode powerline linum monokai-theme jquery-doc iedit hl-line+ highlight-parentheses highlight-indent-guides highlight git-gutter geben flycheck ecb dumb-jump dropdown-list diff-hl company all-the-icons ac-php ac-js2)))
  '(php-mode-psr2-hook (quote (ignore))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -342,6 +347,7 @@ buffer read-only, so I suggest setting kill-read-only-ok to t."
 ; Geben
 (autoload 'geben "geben" "DBGp protocol frontend, a script debugger" t)
 
+(setq frame-resize-pixelwise t)
 
 (provide '.emacs)
 ;;; .emacs ends here
