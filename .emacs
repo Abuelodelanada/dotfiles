@@ -1,3 +1,4 @@
+
 ;;; Packages repository
 (require 'package)
 (add-to-list 'package-archives
@@ -121,7 +122,7 @@
 ;;; Code:
 ;(set-frame-font "Ubuntu Mono 11")
 (set-frame-font "Ubuntu Mono derivative Powerline 11")
-;(set-frame-font "Monaco 10")
+;(set-frame-font "Monaco 11")
 
 ;; Acentos
 (require 'iso-transl)
@@ -204,7 +205,7 @@ buffer read-only, so I suggest setting kill-read-only-ok to t."
 ;; ido mode
 (ido-mode 1)
 (setq ido-enable-flex-matching t)
-(setq ido-use-filename-at-point t) ;; prefer file names near point
+;(setq ido-use-filename-at-point t) ;; prefer file names near point
 
 ;; Powerline
 (require 'powerline)
@@ -233,6 +234,12 @@ buffer read-only, so I suggest setting kill-read-only-ok to t."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ansi-color-names-vector
+   ["#000000" "#F92672" "#A6E22E" "#E6DB74" "#66D9EF" "#FD5FF0" "#A1EFE4" "#F8F8F2"])
+ '(compilation-message-face (quote default))
+ '(custom-safe-themes
+   (quote
+    ("c3d4af771cbe0501d5a865656802788a9a0ff9cf10a7df704ec8b8ef69017c68" default)))
  '(ecb-layout-window-sizes
    (quote
     (("left6"
@@ -240,19 +247,56 @@ buffer read-only, so I suggest setting kill-read-only-ok to t."
       (ecb-methods-buffer-name 0.22784810126582278 . 0.5833333333333334)
       (ecb-history-buffer-name 0.22784810126582278 . 0.20833333333333334)))))
  '(ecb-options-version "2.50")
+ '(fci-rule-color "#3C3D37")
+ '(highlight-changes-colors (quote ("#FD5FF0" "#AE81FF")))
+ '(highlight-tail-colors
+   (quote
+    (("#3C3D37" . 0)
+     ("#679A01" . 20)
+     ("#4BBEAE" . 30)
+     ("#1DB4D0" . 50)
+     ("#9A8F21" . 60)
+     ("#A75B00" . 70)
+     ("#F309DF" . 85)
+     ("#3C3D37" . 100))))
+ '(magit-diff-use-overlays nil)
  '(package-selected-packages
    (quote
-    (yaml-mode smarty-mode powerline linum monokai-theme jquery-doc iedit hl-line+ highlight-parentheses highlight-indent-guides highlight git-gutter geben flycheck ecb dumb-jump dropdown-list diff-hl company all-the-icons ac-php ac-js2)))
- '(php-mode-psr2-hook (quote (ignore))))
+    (adoc-mode company-php auto-indent-mode flymd markdown-mode markdown-mode+ yaml-mode smarty-mode powerline linum monokai-theme jquery-doc iedit hl-line+ highlight-parentheses highlight-indent-guides highlight git-gutter geben flycheck ecb dumb-jump dropdown-list diff-hl company all-the-icons ac-php ac-js2)))
+ '(php-mode-psr2-hook (quote (ignore)))
+ '(pos-tip-background-color "#FFFACE")
+ '(pos-tip-foreground-color "#000000")
+ '(vc-annotate-background nil)
+ '(vc-annotate-color-map
+   (quote
+    ((20 . "#F92672")
+     (40 . "#CF4F1F")
+     (60 . "#C26C0F")
+     (80 . "#E6DB74")
+     (100 . "#AB8C00")
+     (120 . "#A18F00")
+     (140 . "#989200")
+     (160 . "#8E9500")
+     (180 . "#A6E22E")
+     (200 . "#729A1E")
+     (220 . "#609C3C")
+     (240 . "#4E9D5B")
+     (260 . "#3C9F79")
+     (280 . "#A1EFE4")
+     (300 . "#299BA6")
+     (320 . "#2896B5")
+     (340 . "#2790C3")
+     (360 . "#66D9EF"))))
+ '(vc-annotate-very-old-color nil)
+ '(weechat-color-list
+   (quote
+    (unspecified "#000000" "#3C3D37" "#F70057" "#F92672" "#86C30D" "#A6E22E" "#BEB244" "#E6DB74" "#40CAE4" "#66D9EF" "#FB35EA" "#FD5FF0" "#74DBCD" "#A1EFE4" "#F8F8F2" "#F8F8F0"))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-
-
-
 
 ;; Markdown Modes
 (autoload 'markdown-mode "markdown-mode"
@@ -289,7 +333,7 @@ buffer read-only, so I suggest setting kill-read-only-ok to t."
 (global-set-key (kbd "C-;") 'iedit-dwim)
 (put 'downcase-region 'disabled nil)
 
-;(add-hook 'php-mode-hook 'php-enable-psr2-coding-style)
+(add-hook 'php-mode-hook 'php-enable-default-coding-style)
 
 
 ;; Edit files as root
@@ -317,6 +361,12 @@ buffer read-only, so I suggest setting kill-read-only-ok to t."
 
 ; https://github.com/dgutov/diff-hl
 (global-diff-hl-mode)
+
+; https://stackoverflow.com/questions/69934/set-4-space-indent-in-emacs-in-text-mode#1819405
+; Cambiamos TAB por 4 espacios
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
+(setq indent-line-function 'insert-tab)
 
 
 ;http://www.flycheck.org/en/latest/user/quickstart.html#enable-flycheck
@@ -347,7 +397,12 @@ buffer read-only, so I suggest setting kill-read-only-ok to t."
 ; Geben
 (autoload 'geben "geben" "DBGp protocol frontend, a script debugger" t)
 
+; adoc-mode
+(autoload 'adoc-mode "adoc-mode" nil t)
+(add-to-list 'auto-mode-alist (cons "\\.adoc\\'" 'adoc-mode))
+
 (setq frame-resize-pixelwise t)
+
 
 (provide '.emacs)
 ;;; .emacs ends here
