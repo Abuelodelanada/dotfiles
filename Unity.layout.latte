@@ -22,23 +22,26 @@ immutability=1
 plugin=org.kde.latte.plasmoid
 
 [Containments][1][Applets][2][Configuration]
-PreloadWeight=34
+PreloadWeight=2
 
 [Containments][1][Applets][2][Configuration][General]
 isInLatteDock=true
 launchers=multi;*;2;file:///usr/share/applications/firefox.desktop;file:///usr/share/applications/org.kde.dolphin.desktop
 launchers59=file:///usr/share/applications/firefox.desktop,file:///usr/share/applications/org.kde.dolphin.desktop
 
-[Containments][1][Applets][65][Configuration][General]
-favoritesPortedToKAstats=true
-
 [Containments][1][Applets][67]
 immutability=1
 plugin=org.kde.plasma.trash
 
+[Containments][1][Applets][67][Configuration]
+PreloadWeight=18
+
 [Containments][1][Applets][68]
 immutability=1
 plugin=org.kde.plasma.kickerdash
+
+[Containments][1][Applets][68][Configuration]
+PreloadWeight=73
 
 [Containments][1][Applets][68][Configuration][ConfigDialog]
 DialogHeight=480
@@ -47,28 +50,33 @@ DialogWidth=640
 [Containments][1][Applets][68][Configuration][General]
 favoritesPortedToKAstats=true
 
+[Containments][1][Applets][68][Shortcuts]
+global=Meta+D
+
 [Containments][1][Applets][69]
 immutability=1
 plugin=org.kde.plasma.showdesktop
+
+[Containments][1][Applets][69][Configuration]
+PreloadWeight=18
 
 [Containments][1][Applets][70]
 immutability=1
 plugin=org.kde.latte.spacer
 
+[Containments][1][Applets][70][Configuration]
+PreloadWeight=18
+
 [Containments][1][Applets][70][Configuration][ConfigDialog]
 DialogHeight=480
 DialogWidth=640
-
-[Containments][1][Applets][8][Configuration][General]
-favorites=preferred://browser,systemsettings.desktop,org.kde.dolphin.desktop,org.kde.kate.desktop,org.kde.discover.desktop
-favoritesPortedToKAstats=true
 
 [Containments][1][ConfigDialog]
 DialogHeight=561
 DialogWidth=450
 
 [Containments][1][Configuration]
-PreloadWeight=34
+PreloadWeight=2
 
 [Containments][1][General]
 advanced=true
@@ -78,6 +86,7 @@ highlightWindows=true
 iconSize=48
 launchersGroup=Layout
 lockedZoomApplets=70
+middleClickAction=ToggleMinimized
 panelPosition=Top
 panelSize=100
 panelTransparency=75
@@ -85,7 +94,7 @@ shadowOpacity=50
 shadowSize=30
 shadows=All
 showGlow=true
-showToolTips=true
+threeColorsWindows=true
 zoomLevel=0
 
 [Containments][11]
@@ -102,75 +111,69 @@ immutability=1
 plugin=org.kde.kdeconnect
 
 [Containments][11][Applets][12][Configuration]
-PreloadWeight=34
-
-[Containments][11][Applets][13]
-immutability=1
-plugin=org.kde.plasma.pkupdates
+PreloadWeight=2
 
 [Containments][11][Applets][14]
 immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][11][Applets][14][Configuration]
-PreloadWeight=34
+PreloadWeight=2
 
 [Containments][11][Applets][15]
 immutability=1
 plugin=org.kde.plasma.devicenotifier
 
 [Containments][11][Applets][15][Configuration]
-PreloadWeight=34
+PreloadWeight=2
 
 [Containments][11][Applets][16]
 immutability=1
 plugin=org.kde.plasma.notifications
 
 [Containments][11][Applets][16][Configuration]
-PreloadWeight=34
+PreloadWeight=2
 
 [Containments][11][Applets][17]
 immutability=1
 plugin=org.kde.plasma.printmanager
 
 [Containments][11][Applets][17][Configuration]
-PreloadWeight=34
-
-[Containments][11][Applets][18][Configuration]
-PreloadWeight=42
-
-[Containments][11][Applets][19]
-immutability=1
-plugin=org.kde.plasma.battery
-
-[Containments][11][Applets][19][Configuration]
-PreloadWeight=26
-
-[Containments][11][Applets][20][Configuration]
-PreloadWeight=42
+PreloadWeight=2
 
 [Containments][11][Applets][21]
 immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][11][Applets][21][Configuration]
-PreloadWeight=26
+PreloadWeight=0
 
 [Containments][11][Applets][22]
 immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][11][Applets][22][Configuration]
-PreloadWeight=34
+PreloadWeight=12
 
 [Containments][11][Applets][58]
 immutability=1
 plugin=org.kde.discovernotifier
 
 [Containments][11][Applets][58][Configuration]
+PreloadWeight=2
+
+[Containments][11][Applets][71]
+immutability=1
+plugin=org.kde.plasma.battery
+
+[Containments][11][Applets][71][Configuration]
 PreloadWeight=34
 
-[Containments][11][Applets][59][Configuration]
+[Containments][11][Applets][72]
+immutability=1
+plugin=org.kde.plasma.mediacontroller
+
+[Containments][11][Applets][72][Configuration]
 PreloadWeight=42
 
 [Containments][11][ConfigDialog]
@@ -178,9 +181,209 @@ DialogHeight=480
 DialogWidth=640
 
 [Containments][11][Configuration]
-PreloadWeight=34
+PreloadWeight=2
 
 [Containments][11][General]
+extraItems=org.kde.plasma.networkmanagement,org.kde.plasma.printmanager,org.kde.kdeconnect,org.kde.plasma.pkupdates,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.notifications,org.kde.plasma.devicenotifier,org.kde.plasma.volume,org.kde.plasma.mediacontroller,org.kde.discovernotifier
+knownItems=org.kde.plasma.networkmanagement,org.kde.ktp-contactlist,org.kde.plasma.clipboard,org.kde.plasma.printmanager,org.kde.kdeconnect,org.kde.plasma.pkupdates,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.notifications,org.kde.plasma.devicenotifier,org.kde.plasma.volume,org.kde.plasma.mediacontroller,org.kde.discovernotifier,org.kde.plasma.vault
+shownItems=ibus-ui-gtk3,dropbox-client-12978,ownCloud,org.kde.plasma.networkmanagement
+
+[Containments][13]
+activityId=
+dockWindowBehavior=true
+formfactor=2
+immutability=1
+lastScreen=11
+location=3
+onPrimary=false
+plugin=org.kde.latte.containment
+raiseOnActivityChange=false
+raiseOnDesktopChange=false
+timerHide=700
+timerShow=200
+visibility=0
+wallpaperplugin=org.kde.image
+
+[Containments][13][Applets][40]
+immutability=1
+plugin=org.kde.plasma.systemtray
+
+[Containments][13][Applets][40][Configuration]
+PreloadWeight=22
+SystrayContainmentId=18
+
+[Containments][13][Applets][41]
+immutability=1
+plugin=org.kde.activeWindowControl
+
+[Containments][13][Applets][41][Configuration]
+PreloadWeight=10
+
+[Containments][13][Applets][41][Configuration][Appearance]
+buttonOrder=close|minimize|maximize|alldesktops
+buttonSize=0.9
+buttonsStandalone=true
+buttonsVerticalCenter=true
+controlButtonsSpacing=0
+horizontalScreenWidthPercent=0.151
+showButtonOnlyWhenMaximized=true
+showMaximize=true
+showMinimize=true
+slidingIconAndText=true
+
+[Containments][13][Applets][41][Configuration][ConfigDialog]
+DialogHeight=774
+DialogWidth=1280
+
+[Containments][13][Applets][42]
+immutability=1
+plugin=org.kde.plasma.appmenu
+
+[Containments][13][Applets][42][Configuration]
+PreloadWeight=18
+
+[Containments][13][Applets][43]
+immutability=1
+plugin=org.kde.plasma.digitalclock
+
+[Containments][13][Applets][43][Configuration]
+PreloadWeight=17
+
+[Containments][13][Applets][43][Configuration][Appearance]
+enabledCalendarPlugins=/usr/lib/x86_64-linux-gnu/qt5/plugins/plasmacalendarplugins/pimevents.so
+showDate=true
+showWeekNumbers=true
+use24hFormat=2
+
+[Containments][13][Applets][43][Configuration][ConfigDialog]
+DialogHeight=480
+DialogWidth=640
+
+[Containments][13][Applets][44]
+immutability=1
+plugin=org.kde.plasma.lock_logout
+
+[Containments][13][Applets][44][Configuration]
+PreloadWeight=10
+
+[Containments][13][Applets][44][Configuration][ConfigDialog]
+DialogHeight=480
+DialogWidth=640
+
+[Containments][13][Applets][44][Configuration][General]
+show_lockScreen=false
+
+[Containments][13][ConfigDialog]
+DialogHeight=561
+DialogWidth=450
+
+[Containments][13][Configuration]
+PreloadWeight=2
+
+[Containments][13][General]
+advanced=true
+appletOrder=41;42;40;43;44
+disablePanelShadowForMaximized=true
+durationTime=None
+iconSize=26
+panelPosition=10
+panelSize=100
+shadowColor=ececec
+shadowOpacity=10
+shadowSize=5
+shrinkThickMargins=true
+splitterPosition=2
+splitterPosition2=3
+titleTooltips=true
+zoomLevel=0
+
+[Containments][18]
+activityId=
+formfactor=2
+immutability=1
+lastScreen=11
+location=3
+plugin=org.kde.plasma.private.systemtray
+wallpaperplugin=org.kde.image
+
+[Containments][18][Applets][45]
+immutability=1
+plugin=org.kde.kdeconnect
+
+[Containments][18][Applets][45][Configuration]
+PreloadWeight=2
+
+[Containments][18][Applets][46]
+immutability=1
+plugin=org.kde.plasma.mediacontroller
+
+[Containments][18][Applets][46][Configuration]
+PreloadWeight=42
+
+[Containments][18][Applets][47]
+immutability=1
+plugin=org.kde.plasma.printmanager
+
+[Containments][18][Applets][47][Configuration]
+PreloadWeight=2
+
+[Containments][18][Applets][48]
+immutability=1
+plugin=org.kde.discovernotifier
+
+[Containments][18][Applets][48][Configuration]
+PreloadWeight=2
+
+[Containments][18][Applets][49]
+immutability=1
+plugin=org.kde.plasma.bluetooth
+
+[Containments][18][Applets][49][Configuration]
+PreloadWeight=12
+
+[Containments][18][Applets][50]
+immutability=1
+plugin=org.kde.plasma.battery
+
+[Containments][18][Applets][50][Configuration]
+PreloadWeight=34
+
+[Containments][18][Applets][51]
+immutability=1
+plugin=org.kde.plasma.volume
+
+[Containments][18][Applets][51][Configuration]
+PreloadWeight=2
+
+[Containments][18][Applets][52]
+immutability=1
+plugin=org.kde.plasma.devicenotifier
+
+[Containments][18][Applets][52][Configuration]
+PreloadWeight=2
+
+[Containments][18][Applets][53]
+immutability=1
+plugin=org.kde.plasma.notifications
+
+[Containments][18][Applets][53][Configuration]
+PreloadWeight=2
+
+[Containments][18][Applets][54]
+immutability=1
+plugin=org.kde.plasma.networkmanagement
+
+[Containments][18][Applets][54][Configuration]
+PreloadWeight=0
+
+[Containments][18][ConfigDialog]
+DialogHeight=480
+DialogWidth=640
+
+[Containments][18][Configuration]
+PreloadWeight=2
+
+[Containments][18][General]
 extraItems=org.kde.plasma.networkmanagement,org.kde.plasma.printmanager,org.kde.kdeconnect,org.kde.plasma.pkupdates,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.notifications,org.kde.plasma.devicenotifier,org.kde.plasma.volume,org.kde.plasma.mediacontroller,org.kde.discovernotifier
 knownItems=org.kde.plasma.networkmanagement,org.kde.ktp-contactlist,org.kde.plasma.clipboard,org.kde.plasma.printmanager,org.kde.kdeconnect,org.kde.plasma.pkupdates,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.notifications,org.kde.plasma.devicenotifier,org.kde.plasma.volume,org.kde.plasma.mediacontroller,org.kde.discovernotifier,org.kde.plasma.vault
 shownItems=ibus-ui-gtk3,dropbox-client-12978,ownCloud,org.kde.plasma.networkmanagement
@@ -206,7 +409,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][4][Applets][10][Configuration]
-PreloadWeight=54
+PreloadWeight=22
 SystrayContainmentId=11
 
 [Containments][4][Applets][25]
@@ -214,7 +417,7 @@ immutability=1
 plugin=org.kde.plasma.digitalclock
 
 [Containments][4][Applets][25][Configuration]
-PreloadWeight=49
+PreloadWeight=17
 
 [Containments][4][Applets][25][Configuration][Appearance]
 enabledCalendarPlugins=/usr/lib/x86_64-linux-gnu/qt5/plugins/plasmacalendarplugins/pimevents.so
@@ -231,7 +434,7 @@ immutability=1
 plugin=org.kde.activeWindowControl
 
 [Containments][4][Applets][62][Configuration]
-PreloadWeight=42
+PreloadWeight=10
 
 [Containments][4][Applets][62][Configuration][Appearance]
 buttonOrder=close|minimize|maximize|alldesktops
@@ -254,7 +457,7 @@ immutability=1
 plugin=org.kde.plasma.lock_logout
 
 [Containments][4][Applets][63][Configuration]
-PreloadWeight=42
+PreloadWeight=10
 
 [Containments][4][Applets][63][Configuration][ConfigDialog]
 DialogHeight=480
@@ -262,26 +465,27 @@ DialogWidth=640
 
 [Containments][4][Applets][63][Configuration][General]
 show_lockScreen=false
-show_suspendToRam=true
 
 [Containments][4][Applets][64]
 immutability=1
 plugin=org.kde.plasma.appmenu
+
+[Containments][4][Applets][64][Configuration]
+PreloadWeight=18
 
 [Containments][4][ConfigDialog]
 DialogHeight=561
 DialogWidth=450
 
 [Containments][4][Configuration]
-PreloadWeight=34
+PreloadWeight=2
 
 [Containments][4][General]
 advanced=true
 appletOrder=62;64;10;25;63
 disablePanelShadowForMaximized=true
 durationTime=None
-iconMargin=10
-iconSize=24
+iconSize=26
 panelPosition=10
 panelSize=100
 shadowColor=ececec
@@ -300,6 +504,6 @@ favoritesPortedToKAstats=true
 [LayoutSettings]
 activities=
 color=orange
-launchers=file:///usr/share/applications/firefox.desktop,applications:org.kde.kontact.desktop,file:///usr/share/applications/org.kde.dolphin.desktop,applications:emacs25.desktop,applications:org.kde.konsole.desktop
+launchers=file:///usr/share/applications/org.kde.dolphin.desktop,file:///usr/share/applications/firefox.desktop,applications:chromium-browser.desktop,applications:org.kde.kontact.desktop,applications:emacs25.desktop,applications:org.kde.konsole.desktop,applications:vlc.desktop
 showInMenu=true
 version=2

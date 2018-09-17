@@ -45,6 +45,11 @@ AppletOrder=208;207
 [Containments][211][General]
 AppletOrder=368;370;369;352;354;381
 
+[Containments][353][General]
+extraItems=org.kde.discovernotifier,org.kde.kdeconnect,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.networkmanagement,org.kde.plasma.mediacontroller,org.kde.plasma.volume,org.kde.plasma.notifications,org.kde.plasma.devicenotifier,org.kde.plasma.printmanager
+knownItems=org.kde.discovernotifier,org.kde.kdeconnect,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.networkmanagement,org.kde.plasma.mediacontroller,org.kde.plasma.volume,org.kde.plasma.notifications,org.kde.ktp-contactlist,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.printmanager,org.kde.plasma.vault
+shownItems=ownCloud
+
 [Containments][40][General]
 AppletOrder=49;60;44;43
 
