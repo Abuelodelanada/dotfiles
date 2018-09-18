@@ -1,0 +1,18 @@
+[PIMEventsPlugin]
+calendars=2983,2984,2986
+
+[PlasmaRunnerManager]
+LaunchCounts=1 services_org.kde.konsole.desktop
+pluginWhiteList=services,desktopsessions,PowerDevil,shell,bookmarks,baloosearch,locations
+
+[ScreenConnectors]
+10=LVDS-1
+11=DP-1
+
+[UniversalSettings]
+currentLayout=Unity
+lastNonAssignedLayout=Unity
+launchers=file:///usr/share/applications/firefox.desktop,file:///usr/share/applications/org.kde.dolphin.desktop
+layoutsWindowSize=700,450
+showInfoWindow=true
+version=2
