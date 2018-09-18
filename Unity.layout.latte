@@ -395,7 +395,7 @@ formfactor=2
 immutability=1
 lastScreen=-1
 location=3
-onPrimary=true
+onPrimary=false
 plugin=org.kde.latte.containment
 raiseOnActivityChange=false
 raiseOnDesktopChange=false
@@ -429,13 +429,6 @@ use24hFormat=2
 DialogHeight=480
 DialogWidth=640
 
-[Containments][4][Applets][62]
-immutability=1
-plugin=org.kde.activeWindowControl
-
-[Containments][4][Applets][62][Configuration]
-PreloadWeight=10
-
 [Containments][4][Applets][62][Configuration][Appearance]
 buttonOrder=close|minimize|maximize|alldesktops
 buttonSize=0.9
@@ -447,10 +440,10 @@ showButtonOnlyWhenMaximized=true
 showMaximize=true
 showMinimize=true
 slidingIconAndText=true
+useWindowTitleReplace=true
 
-[Containments][4][Applets][62][Configuration][ConfigDialog]
-DialogHeight=774
-DialogWidth=1280
+[Containments][4][Applets][62][Configuration][Behaviour]
+showForCurrentScreenOnly=true
 
 [Containments][4][Applets][63]
 immutability=1
@@ -473,6 +466,29 @@ plugin=org.kde.plasma.appmenu
 [Containments][4][Applets][64][Configuration]
 PreloadWeight=18
 
+[Containments][4][Applets][73]
+immutability=1
+plugin=org.kde.activeWindowControl
+
+[Containments][4][Applets][73][Configuration][Appearance]
+buttonOrder=close|minimize|maximize|alldesktops
+buttonSize=0.9
+buttonsStandalone=true
+controlButtonsSpacing=0
+doNotHideControlButtons=true
+horizontalScreenWidthPercent=0.166
+showButtonOnlyWhenMaximized=true
+showMaximize=true
+showMinimize=true
+useWindowTitleReplace=true
+
+[Containments][4][Applets][73][Configuration][Behaviour]
+showForCurrentScreenOnly=true
+
+[Containments][4][Applets][73][Configuration][ConfigDialog]
+DialogHeight=774
+DialogWidth=1280
+
 [Containments][4][ConfigDialog]
 DialogHeight=561
 DialogWidth=450
@@ -482,7 +498,7 @@ PreloadWeight=2
 
 [Containments][4][General]
 advanced=true
-appletOrder=62;64;10;25;63
+appletOrder=73;64;10;25;63
 disablePanelShadowForMaximized=true
 durationTime=None
 iconSize=26
