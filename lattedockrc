@@ -1,9 +1,37 @@
+[Containments][11][General]
+extraItems=org.kde.plasma.networkmanagement,org.kde.plasma.printmanager,org.kde.kdeconnect,org.kde.plasma.pkupdates,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.notifications,org.kde.plasma.devicenotifier,org.kde.plasma.volume,org.kde.plasma.mediacontroller,org.kde.discovernotifier
+knownItems=org.kde.plasma.networkmanagement,org.kde.ktp-contactlist,org.kde.plasma.clipboard,org.kde.plasma.printmanager,org.kde.kdeconnect,org.kde.plasma.pkupdates,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.notifications,org.kde.plasma.devicenotifier,org.kde.plasma.volume,org.kde.plasma.mediacontroller,org.kde.discovernotifier,org.kde.plasma.vault
+shownItems=ibus-ui-gtk3,dropbox-client-12978,ownCloud,org.kde.plasma.networkmanagement
+
+[Containments][4][General]
+advanced=true
+appletOrder=74;64;10;25;63
+disablePanelShadowForMaximized=true
+durationTime=None
+iconSize=26
+panelPosition=10
+panelSize=100
+shadowColor=ececec
+shadowOpacity=10
+shadowSize=5
+splitterPosition=3
+splitterPosition2=4
+titleTooltips=true
+zoomLevel=0
+
 [PIMEventsPlugin]
 calendars=2983,2984,2986
 
 [PlasmaRunnerManager]
 LaunchCounts=1 services_org.kde.konsole.desktop
 pluginWhiteList=services,desktopsessions,PowerDevil,shell,bookmarks,baloosearch,locations
+
+[PlasmaTransientsConfig]
+PreloadWeight=18
+raiseOnActivityChange=false
+raiseOnDesktopChange=false
+timerHide=700
+timerShow=200
 
 [ScreenConnectors]
 10=LVDS-1
