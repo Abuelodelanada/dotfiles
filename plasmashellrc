@@ -83,12 +83,12 @@ Width 1280=700
 Number of Actions=0
 
 [KFileDialog Settings]
-Recent Files[$e]=20170205_113522_HDR.jpg,file:$HOME/tuneo_escritorio/Lula.jpeg,file:$HOME/Imágenes/VacacionesUruguay/WhatsApp Image 2018-02-07 at 01.18.32.jpeg,file:$HOME/Imágenes/20170205_113522_HDR.jpg
-Recent URLs[$e]=file:$HOME/Imágenes/,file:$HOME/Imágenes/VacacionesUruguay/,file:$HOME/tuneo_escritorio/
+Recent Files[$e]=20170205_113522_HDR.jpg,file:$HOME/tuneo_escritorio/uss_enterprise.jpeg,file:$HOME/tuneo_escritorio/D10S.jpg,file:$HOME/tuneo_escritorio/Lula.jpeg,file:$HOME/Imágenes/VacacionesUruguay/WhatsApp Image 2018-02-07 at 01.18.32.jpeg,file:$HOME/Imágenes/20170205_113522_HDR.jpg
+Recent URLs[$e]=file:$HOME/Imágenes/,file:$HOME/Imágenes/VacacionesUruguay/,file:$HOME/tuneo_escritorio/,file:$HOME/tuneo_escritorio/1920x1080/
 
 [KPropertiesDialog]
 Height 800=427
-Width 1280=393
+Width 1280=428
 
 [Notification Messages]
 ConfirmEmptyTrash=true
