@@ -1,42 +1,42 @@
 [Containments][19][Applets][57][Configuration][Appearance]
-boldFontWeight=true
-buttonOrder=close|minimize|maximize|alldesktops
-buttonSize=0.9
-buttonsStandalone=true
-buttonsVerticalCenter=true
-controlButtonsSpacing=0
-doNotHideControlButtons=true
-horizontalScreenWidthPercent=0.17600000000000002
-limitTextWidth=true
-showButtonOnlyWhenMaximized=true
-showMaximize=true
-showMinimize=true
-slidingIconAndText=true
-useWindowTitleReplace=true
+boldFontWeight[$d]
+buttonOrder[$d]
+buttonSize[$d]
+buttonsStandalone[$d]
+buttonsVerticalCenter[$d]
+controlButtonsSpacing[$d]
+doNotHideControlButtons[$d]
+horizontalScreenWidthPercent[$d]
+limitTextWidth[$d]
+showButtonOnlyWhenMaximized[$d]
+showMaximize[$d]
+showMinimize[$d]
+slidingIconAndText[$d]
+useWindowTitleReplace[$d]
 
 [Containments][19][Applets][57][Configuration][Behaviour]
-showForCurrentScreenOnly=true
+showForCurrentScreenOnly[$d]
 
 [Containments][19][General]
-advanced=true
-appletOrder=60;56;46;55
-disablePanelShadowForMaximized=true
-durationTime=None
-iconSize=26
-panelPosition=10
-panelSize=100
-shadowColor=ececec
-shadowOpacity=10
-shadowSize=5
-splitterPosition=1
-splitterPosition2=2
-titleTooltips=true
-zoomLevel=0
+advanced[$d]
+appletOrder[$d]
+disablePanelShadowForMaximized[$d]
+durationTime[$d]
+iconSize[$d]
+panelPosition[$d]
+panelSize[$d]
+shadowColor[$d]
+shadowOpacity[$d]
+shadowSize[$d]
+splitterPosition[$d]
+splitterPosition2[$d]
+titleTooltips[$d]
+zoomLevel[$d]
 
 [Containments][20][General]
-extraItems=org.kde.plasma.networkmanagement,org.kde.plasma.printmanager,org.kde.kdeconnect,org.kde.plasma.pkupdates,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.notifications,org.kde.plasma.devicenotifier,org.kde.plasma.volume,org.kde.plasma.mediacontroller,org.kde.discovernotifier
-knownItems=org.kde.plasma.networkmanagement,org.kde.ktp-contactlist,org.kde.plasma.clipboard,org.kde.plasma.printmanager,org.kde.kdeconnect,org.kde.plasma.pkupdates,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.notifications,org.kde.plasma.devicenotifier,org.kde.plasma.volume,org.kde.plasma.mediacontroller,org.kde.discovernotifier,org.kde.plasma.vault
-shownItems=ibus-ui-gtk3,dropbox-client-12978,ownCloud,org.kde.plasma.networkmanagement
+extraItems[$d]
+knownItems[$d]
+shownItems[$d]
 
 [Containments][4][General]
 advanced[$d]
@@ -58,15 +58,15 @@ zoomLevel[$d]
 calendars=2983,2984,2986
 
 [PlasmaRunnerManager]
-LaunchCounts=1 services_org.kde.konsole.desktop
+LaunchCounts=1 services_org.kde.spectacle.desktop,1 services_org.kde.konsole.desktop
 pluginWhiteList=services,desktopsessions,PowerDevil,shell,bookmarks,baloosearch,locations
 
 [PlasmaTransientsConfig]
-PreloadWeight=2
-raiseOnActivityChange=false
-raiseOnDesktopChange=false
-timerHide=700
-timerShow=200
+PreloadWeight[$d]
+raiseOnActivityChange[$d]
+raiseOnDesktopChange[$d]
+timerHide[$d]
+timerShow[$d]
 
 [ScreenConnectors]
 10=LVDS-1

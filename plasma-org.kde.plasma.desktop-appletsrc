@@ -689,4 +689,4 @@ immutability=1
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=desktop:/TurnoAnses.pdf,0,desktop:/backup-OpenWrt-2018-04-15.tar.gz,0,desktop:/Medicamentos_No_registrados_13-12-16.pdf,0,desktop:/perdida_retiros.ods,0,desktop:/CartaDocumento.pdf,0,desktop:/minuta_2018_06_11.txt,0,desktop:/suitecrm_backup.tar.gz,0,desktop:/alquiler_gcoop.ods,0,desktop:/PRODE 2018 - FIXTURE JOSE.xls,0,desktop:/2018-05-30-RMS-CCC.mp4,0,desktop:/minuta_2018_06_18.txt,0,desktop:/TurnoAnses2.pdf,0,desktop:/PRODE 2018 - FIXTURE VACÍO.xls,0
+screenMapping=desktop:/minuta_2018_06_11.txt,0,desktop:/suitecrm_backup.tar.gz,0,desktop:/TurnoAnses.pdf,0,desktop:/CartaDocumento.pdf,0,desktop:/alquiler_gcoop.ods,0,desktop:/perdida_retiros.ods,0,desktop:/PRODE 2018 - FIXTURE JOSE.xls,0,desktop:/minuta_2018_06_18.txt,0,desktop:/2018-05-30-RMS-CCC.mp4,0,desktop:/PRODE 2018 - FIXTURE VACÍO.xls,0,desktop:/Medicamentos_No_registrados_13-12-16.pdf,0,desktop:/backup-OpenWrt-2018-04-15.tar.gz,0,desktop:/TurnoAnses2.pdf,0

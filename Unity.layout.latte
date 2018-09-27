@@ -41,7 +41,7 @@ immutability=1
 plugin=org.kde.plasma.kickerdash
 
 [Containments][1][Applets][68][Configuration]
-PreloadWeight=38
+PreloadWeight=30
 
 [Containments][1][Applets][68][Configuration][ConfigDialog]
 DialogHeight=480
@@ -122,6 +122,12 @@ plugin=org.kde.activeWindowControl
 [Containments][12][Applets][58][Configuration]
 PreloadWeight=0
 
+[Containments][12][Applets][58][Configuration][AppMenu]
+appmenuBoldTitleWhenMenuDisplayed=true
+appmenuFillHeight=true
+appmenuNextToButtons=true
+appmenuNextToIconAndText=true
+
 [Containments][12][Applets][58][Configuration][Appearance]
 boldFontWeight=true
 buttonOrder=close|minimize|maximize|alldesktops
@@ -149,7 +155,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][12][Applets][59][Configuration]
-PreloadWeight=100
+PreloadWeight=92
 SystrayContainmentId=14
 
 [Containments][12][Applets][63]
@@ -157,7 +163,7 @@ immutability=1
 plugin=org.kde.plasma.digitalclock
 
 [Containments][12][Applets][63][Configuration]
-PreloadWeight=5
+PreloadWeight=0
 
 [Containments][12][Applets][63][Configuration][Appearance]
 boldText=true
@@ -266,15 +272,6 @@ plugin=org.kde.plasma.appmenu
 [Containments][13][Applets][42][Configuration]
 PreloadWeight=0
 
-[Containments][13][Applets][43][Configuration][Appearance]
-enabledCalendarPlugins=/usr/lib/x86_64-linux-gnu/qt5/plugins/plasmacalendarplugins/pimevents.so
-showDate=true
-showWeekNumbers=true
-use24hFormat=2
-
-[Containments][13][Applets][44][Configuration][General]
-show_lockScreen=false
-
 [Containments][13][ConfigDialog]
 DialogHeight=561
 DialogWidth=450
@@ -327,7 +324,7 @@ immutability=1
 plugin=org.kde.plasma.notifications
 
 [Containments][14][Applets][76][Configuration]
-PreloadWeight=5
+PreloadWeight=0
 
 [Containments][14][Applets][77]
 immutability=1
@@ -341,7 +338,7 @@ immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][14][Applets][82][Configuration]
-PreloadWeight=95
+PreloadWeight=87
 
 [Containments][14][Applets][82][Configuration][ConfigDialog]
 DialogHeight=480
@@ -352,7 +349,7 @@ immutability=1
 plugin=org.kde.plasma.devicenotifier
 
 [Containments][14][Applets][83][Configuration]
-PreloadWeight=20
+PreloadWeight=12
 
 [Containments][14][Applets][84]
 immutability=1
@@ -373,14 +370,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][14][Applets][86][Configuration]
-PreloadWeight=15
-
-[Containments][14][Applets][88]
-immutability=1
-plugin=org.kde.plasma.mediacontroller
-
-[Containments][14][Applets][88][Configuration]
-PreloadWeight=0
+PreloadWeight=7
 
 [Containments][14][ConfigDialog]
 DialogHeight=480
@@ -393,27 +383,6 @@ PreloadWeight=0
 extraItems=org.kde.plasma.networkmanagement,org.kde.plasma.printmanager,org.kde.kdeconnect,org.kde.plasma.pkupdates,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.notifications,org.kde.plasma.devicenotifier,org.kde.plasma.volume,org.kde.plasma.mediacontroller,org.kde.discovernotifier
 knownItems=org.kde.plasma.networkmanagement,org.kde.ktp-contactlist,org.kde.plasma.clipboard,org.kde.plasma.printmanager,org.kde.kdeconnect,org.kde.plasma.pkupdates,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.notifications,org.kde.plasma.devicenotifier,org.kde.plasma.volume,org.kde.plasma.mediacontroller,org.kde.discovernotifier,org.kde.plasma.vault
 shownItems=ibus-ui-gtk3,dropbox-client-12978,ownCloud,org.kde.plasma.networkmanagement
-
-[Containments][18][General]
-extraItems=org.kde.plasma.networkmanagement,org.kde.plasma.printmanager,org.kde.kdeconnect,org.kde.plasma.pkupdates,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.notifications,org.kde.plasma.devicenotifier,org.kde.plasma.volume,org.kde.plasma.mediacontroller,org.kde.discovernotifier
-knownItems=org.kde.plasma.networkmanagement,org.kde.ktp-contactlist,org.kde.plasma.clipboard,org.kde.plasma.printmanager,org.kde.kdeconnect,org.kde.plasma.pkupdates,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.notifications,org.kde.plasma.devicenotifier,org.kde.plasma.volume,org.kde.plasma.mediacontroller,org.kde.discovernotifier,org.kde.plasma.vault
-shownItems=ibus-ui-gtk3,dropbox-client-12978,ownCloud,org.kde.plasma.networkmanagement
-
-[Containments][4][Applets][73][Configuration][Appearance]
-buttonOrder=close|minimize|maximize|alldesktops
-buttonSize=0.9
-buttonsStandalone=true
-controlButtonsSpacing=0
-doNotHideControlButtons=true
-horizontalScreenWidthPercent=0.166
-showButtonOnlyWhenMaximized=true
-showMaximize=true
-showMinimize=true
-slidingIconAndText=true
-useWindowTitleReplace=true
-
-[Containments][4][Applets][73][Configuration][Behaviour]
-showForCurrentScreenOnly=true
 
 [Containments1Appletsts][8][Configuration][General]
 favorites=preferred://browser,systemsettings.desktop,org.kde.dolphin.desktop,org.kde.kate.desktop,org.kde.discover.desktop
