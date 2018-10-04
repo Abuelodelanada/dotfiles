@@ -1,12 +1,19 @@
+;;;
+;;;
+;;;
 
-;;; Packages repository
-(require 'package)
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.org/packages/") t)
-(when (< emacs-major-version 24)
-  ;; For important compatibility libraries like cl-lib
-  (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
 (package-initialize)
+
+(load "~/.emacs.d/init-packages")
+(provide 'init)
+
+;;; init.el ends here
+
+;; Configuraciones
 
 ;; Global settings
 (setq inhibit-startup-message t) ;; Disable startup messages
@@ -15,11 +22,15 @@
 (setq auto-save-default nil) ;; Stop creating auto #autosave# files
 
 ;; Modes
-(defun initialize-linum (&optional frame)
-  (require 'linum)
-  (add-hook 'prog-mode-hook 'linum-mode))
-(when (daemonp) (add-hook 'window-setup-hook 'initialize-linum))
-(global-linum-mode 1) ;; Show line-number
+(defun initialize-nlinum (&optional frame)
+  (require 'nlinum)
+  (add-hook 'prog-mode-hook 'nlinum-mode))
+(when (daemonp) (add-hook 'window-setup-hook 'initialize-nlinum))
+(global-nlinum-mode 1) ;; Show line-number
+
+(require 'nlinum-hl)
+
+(setq nlinum-highlight-current-line nil)
 
 (tool-bar-mode -1) ;; Hide toolbar
 (scroll-bar-mode -1) ;; Hide scrollbar
@@ -124,6 +135,8 @@
 (set-frame-font "Ubuntu Mono derivative Powerline 11")
 ;(set-frame-font "Monaco 11")
 
+;(global-font-lock-mode 0)
+
 ;; Acentos
 (require 'iso-transl)
 
@@ -157,6 +170,30 @@
 (setq monokai-background "#000000")
 (load-theme 'monokai t)
 (set-cursor-color "#d2ff27")
+
+
+
+;(require 'doom-themes)
+;
+;;; Global settings (defaults)
+;(setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
+;      doom-themes-enable-italic t) ; if nil, italics is universally disabled
+;
+;;; Load the theme (doom-one, doom-molokai, etc); keep in mind that each theme
+;;; may have their own settings.
+;(load-theme 'doom-molokai t)
+;
+;;; Enable flashing mode-line on errors
+;(doom-themes-visual-bell-config)
+;
+;;; Enable custom neotree theme (all-the-icons must be installed!)
+;(doom-themes-neotree-config)
+;;; or for treemacs users
+;(doom-themes-treemacs-config)
+;
+;;; Corrects (and improves) org-mode's native fontification.
+;(doom-themes-org-config)
+
 
 ;; keyboard scroll one line at a time
 (setq scroll-step 1)
@@ -193,7 +230,7 @@ buffer read-only, so I suggest setting kill-read-only-ok to t."
 (yas-global-mode 1)
 
 
-(require 'dropdown-list)
+;(require 'dropdown-list)
 (setq yas-prompt-functions '(yas-dropdown-prompt
                              yas-ido-prompt
                              yas-completing-prompt))
@@ -229,74 +266,8 @@ buffer read-only, so I suggest setting kill-read-only-ok to t."
 (setq ecb-tip-of-the-day nil)
 
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(ansi-color-names-vector
-   ["#000000" "#F92672" "#A6E22E" "#E6DB74" "#66D9EF" "#FD5FF0" "#A1EFE4" "#F8F8F2"])
- '(compilation-message-face (quote default))
- '(custom-safe-themes
-   (quote
-    ("c3d4af771cbe0501d5a865656802788a9a0ff9cf10a7df704ec8b8ef69017c68" default)))
- '(ecb-layout-window-sizes
-   (quote
-    (("left6"
-      (ecb-sources-buffer-name 0.22784810126582278 . 0.1875)
-      (ecb-methods-buffer-name 0.22784810126582278 . 0.5833333333333334)
-      (ecb-history-buffer-name 0.22784810126582278 . 0.20833333333333334)))))
- '(ecb-options-version "2.50")
- '(fci-rule-color "#3C3D37")
- '(highlight-changes-colors (quote ("#FD5FF0" "#AE81FF")))
- '(highlight-tail-colors
-   (quote
-    (("#3C3D37" . 0)
-     ("#679A01" . 20)
-     ("#4BBEAE" . 30)
-     ("#1DB4D0" . 50)
-     ("#9A8F21" . 60)
-     ("#A75B00" . 70)
-     ("#F309DF" . 85)
-     ("#3C3D37" . 100))))
- '(magit-diff-use-overlays nil)
- '(package-selected-packages
-   (quote
-    (adoc-mode company-php auto-indent-mode flymd markdown-mode markdown-mode+ yaml-mode smarty-mode powerline linum monokai-theme jquery-doc iedit hl-line+ highlight-parentheses highlight-indent-guides highlight git-gutter geben flycheck ecb dumb-jump dropdown-list diff-hl company all-the-icons ac-php ac-js2)))
- '(php-mode-psr2-hook (quote (ignore)))
- '(pos-tip-background-color "#FFFACE")
- '(pos-tip-foreground-color "#000000")
- '(vc-annotate-background nil)
- '(vc-annotate-color-map
-   (quote
-    ((20 . "#F92672")
-     (40 . "#CF4F1F")
-     (60 . "#C26C0F")
-     (80 . "#E6DB74")
-     (100 . "#AB8C00")
-     (120 . "#A18F00")
-     (140 . "#989200")
-     (160 . "#8E9500")
-     (180 . "#A6E22E")
-     (200 . "#729A1E")
-     (220 . "#609C3C")
-     (240 . "#4E9D5B")
-     (260 . "#3C9F79")
-     (280 . "#A1EFE4")
-     (300 . "#299BA6")
-     (320 . "#2896B5")
-     (340 . "#2790C3")
-     (360 . "#66D9EF"))))
- '(vc-annotate-very-old-color nil)
- '(weechat-color-list
-   (quote
-    (unspecified "#000000" "#3C3D37" "#F70057" "#F92672" "#86C30D" "#A6E22E" "#BEB244" "#E6DB74" "#40CAE4" "#66D9EF" "#FB35EA" "#FD5FF0" "#74DBCD" "#A1EFE4" "#F8F8F2" "#F8F8F0"))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+
+
 
 ;; Markdown Modes
 (autoload 'markdown-mode "markdown-mode"
@@ -333,7 +304,7 @@ buffer read-only, so I suggest setting kill-read-only-ok to t."
 (global-set-key (kbd "C-;") 'iedit-dwim)
 (put 'downcase-region 'disabled nil)
 
-(add-hook 'php-mode-hook 'php-enable-default-coding-style)
+(add-hook 'php-mode-hook 'php-enable-psr2-coding-style)
 
 
 ;; Edit files as root
@@ -355,9 +326,6 @@ buffer read-only, so I suggest setting kill-read-only-ok to t."
 (setq lpr-command "gtklp")
 (setq ps-lpr-command "gtklp")
 
-; https://github.com/DarthFennec/highlight-indent-guides
-(add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
-(setq highlight-indent-guides-method 'character)
 
 ; https://github.com/dgutov/diff-hl
 (global-diff-hl-mode)
@@ -385,8 +353,8 @@ buffer read-only, so I suggest setting kill-read-only-ok to t."
   )
 
 ; highlight current line
-(require 'hl-line+)
-(toggle-hl-line-when-idle 1)
+;(require 'hl-line+)
+;(toggle-hl-line-when-idle 1)
 
 
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
@@ -403,6 +371,19 @@ buffer read-only, so I suggest setting kill-read-only-ok to t."
 
 (setq frame-resize-pixelwise t)
 
-
 (provide '.emacs)
 ;;; .emacs ends here
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (dash-functional ag yasnippet-snippets yaml-mode smarty-mode powerline nlinum-hl monokai-theme markdown-mode+ jquery-doc indent-guide iedit highlight-parentheses highlight-indent-guides highlight git-gutter geben flymd flymake-php flycheck ecb dumb-jump diff-hl company-php auto-indent-mode all-the-icons adoc-mode ac-php ac-js2))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
