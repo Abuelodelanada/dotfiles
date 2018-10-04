@@ -71,9 +71,30 @@ export PATH=~/trabajos/multi-ssh-config:$PATH
 export PATH=~/trabajos/automatizacion/bin:$PATH
 export PATH=~/desarrollo/dotfiles:$PATH
 export TERM=xterm-256color
+export PATH=$PATH:/home/jose/trabajos/SuiteCRM/vendor/bin
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+# SuiteCRM test
+export DATABASE_DRIVER=MYSQL;
+export DATABASE_NAME=suitecrm;
+export DATABASE_HOST=localhost;
+export DATABASE_USER=root;
+export DATABASE_PASSWORD=xx;
+export INSTANCE_URL=http://localhost/SuiteCRM;
+export INSTANCE_ADMIN_USER=admin;
+export INSTANCE_ADMIN_PASSWORD=xx;
+export INSTANCE_CLIENT_ID=suitecrm_client;
+export INSTANCE_CLIENT_SECRET=secret;
+export PROGRESS_DELAY=2;
+
+
+if [ -d "$HOME/Android/platform-tools" ] ; then
+    export PATH="$HOME/Android/platform-tools:$PATH"
+fi
+
 
 if [ "$TMUX" = "" ]; then tmux; fi
