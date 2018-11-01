@@ -1,5 +1,5 @@
 [ActionPlugins][1]
-RightButton;NoModifier=org.kde.contextmenu
+RightButton;NoModifier=org.kde.latte.contextmenu
 
 [Containments][1]
 activityId=
@@ -296,7 +296,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][14][Applets][86][Configuration]
-PreloadWeight=15
+PreloadWeight=20
 
 [Containments][14][Applets][87]
 immutability=1
@@ -313,8 +313,8 @@ DialogWidth=640
 PreloadWeight=0
 
 [Containments][14][General]
-extraItems=org.kde.plasma.networkmanagement,org.kde.plasma.printmanager,org.kde.kdeconnect,org.kde.plasma.pkupdates,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.notifications,org.kde.plasma.devicenotifier,org.kde.plasma.volume,org.kde.plasma.mediacontroller,org.kde.discovernotifier
-knownItems=org.kde.plasma.networkmanagement,org.kde.ktp-contactlist,org.kde.plasma.clipboard,org.kde.plasma.printmanager,org.kde.kdeconnect,org.kde.plasma.pkupdates,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.notifications,org.kde.plasma.devicenotifier,org.kde.plasma.volume,org.kde.plasma.mediacontroller,org.kde.discovernotifier,org.kde.plasma.vault
+extraItems=org.kde.plasma.networkmanagement,org.kde.plasma.printmanager,org.kde.kdeconnect,org.kde.plasma.pkupdates,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.notifications,org.kde.plasma.devicenotifier,org.kde.plasma.volume,org.kde.plasma.mediacontroller,org.kde.discovernotifier,org.kde.plasma.keyboardindicator
+knownItems=org.kde.plasma.networkmanagement,org.kde.ktp-contactlist,org.kde.plasma.clipboard,org.kde.plasma.printmanager,org.kde.kdeconnect,org.kde.plasma.pkupdates,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.notifications,org.kde.plasma.devicenotifier,org.kde.plasma.volume,org.kde.plasma.mediacontroller,org.kde.discovernotifier,org.kde.plasma.vault,org.kde.plasma.keyboardindicator
 shownItems=ibus-ui-gtk3,dropbox-client-12978,ownCloud,org.kde.plasma.networkmanagement
 
 [Containments][15]
@@ -516,6 +516,10 @@ plugin=org.kde.plasma.bluetooth
 [Containments][16][Applets][55][Configuration]
 PreloadWeight=5
 
+[Containments][16][Applets][87]
+immutability=1
+plugin=org.kde.plasma.keyboardindicator
+
 [Containments][16][Applets][88]
 immutability=1
 plugin=org.kde.plasma.mediacontroller
@@ -531,8 +535,8 @@ DialogWidth=640
 PreloadWeight=0
 
 [Containments][16][General]
-extraItems=org.kde.plasma.networkmanagement,org.kde.plasma.printmanager,org.kde.kdeconnect,org.kde.plasma.pkupdates,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.notifications,org.kde.plasma.devicenotifier,org.kde.plasma.volume,org.kde.plasma.mediacontroller,org.kde.discovernotifier
-knownItems=org.kde.plasma.networkmanagement,org.kde.ktp-contactlist,org.kde.plasma.clipboard,org.kde.plasma.printmanager,org.kde.kdeconnect,org.kde.plasma.pkupdates,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.notifications,org.kde.plasma.devicenotifier,org.kde.plasma.volume,org.kde.plasma.mediacontroller,org.kde.discovernotifier,org.kde.plasma.vault
+extraItems=org.kde.plasma.networkmanagement,org.kde.plasma.printmanager,org.kde.kdeconnect,org.kde.plasma.pkupdates,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.notifications,org.kde.plasma.devicenotifier,org.kde.plasma.volume,org.kde.plasma.mediacontroller,org.kde.discovernotifier,org.kde.plasma.keyboardindicator
+knownItems=org.kde.plasma.networkmanagement,org.kde.ktp-contactlist,org.kde.plasma.clipboard,org.kde.plasma.printmanager,org.kde.kdeconnect,org.kde.plasma.pkupdates,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.notifications,org.kde.plasma.devicenotifier,org.kde.plasma.volume,org.kde.plasma.mediacontroller,org.kde.discovernotifier,org.kde.plasma.vault,org.kde.plasma.keyboardindicator
 shownItems=ibus-ui-gtk3,dropbox-client-12978,ownCloud,org.kde.plasma.networkmanagement
 
 [Containments1Appletsts][8][Configuration][General]
@@ -541,7 +545,11 @@ favoritesPortedToKAstats=true
 
 [LayoutSettings]
 activities=
+background=
 color=orange
+disableBordersForMaximizedWindows=false
+lastUsedActivity=a68aad72-a2ac-47b8-b43b-212aac2ffb31
 launchers=file:///usr/share/applications/org.kde.dolphin.desktop,file:///usr/share/applications/firefox.desktop,applications:chromium-browser.desktop,applications:org.kde.kontact.desktop,applications:emacs25.desktop,applications:org.kde.konsole.desktop,applications:vlc.desktop
 showInMenu=true
+textColor=fcfcfc
 version=2

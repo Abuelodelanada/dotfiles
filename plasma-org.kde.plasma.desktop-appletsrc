@@ -29,6 +29,7 @@ PreloadWeight=0
 ToolBoxButtonState=right
 ToolBoxButtonX=1174
 ToolBoxButtonY=250
+positions=2,12,desktop:/opacustep.zip,1,4,desktop:/minuta_2018_10_22.txt,1,3,desktop:/Dimensionamiento_Económico-Financiero_-_Grupo_14.xlsx,1,2,desktop:/Constancia de trabajo.doc,1,1,desktop:/opacus,1,0
 showToolbox=false
 sortMode=-1
 textLines=1
@@ -689,4 +690,4 @@ immutability=1
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=desktop:/2018-05-30-RMS-CCC.mp4,0,desktop:/PRODE 2018 - FIXTURE JOSE.xls,0,desktop:/backup-OpenWrt-2018-04-15.tar.gz,0,desktop:/suitecrm_backup.tar.gz,0,desktop:/alquiler_gcoop.ods,0,desktop:/Medicamentos_No_registrados_13-12-16.pdf,0,desktop:/perdida_retiros.ods,0,desktop:/CartaDocumento.pdf,0,desktop:/minuta_2018_06_18.txt,0,desktop:/PRODE 2018 - FIXTURE VACÍO.xls,0,desktop:/TurnoAnses.pdf,0,desktop:/TurnoAnses2.pdf,0,desktop:/minuta_2018_06_11.txt,0
+screenMapping=desktop:/minuta_2018_06_18.txt,0,desktop:/TurnoAnses.pdf,0,desktop:/PRODE 2018 - FIXTURE JOSE.xls,0,desktop:/CartaDocumento.pdf,0,desktop:/Constancia de trabajo.doc,0,desktop:/PRODE 2018 - FIXTURE VACÍO.xls,0,desktop:/opacus,0,desktop:/suitecrm_backup.tar.gz,0,desktop:/alquiler_gcoop.ods,0,desktop:/minuta_2018_10_22.txt,0,desktop:/TurnoAnses2.pdf,0,desktop:/2018-05-30-RMS-CCC.mp4,0,desktop:/opacustep.zip,0,desktop:/Medicamentos_No_registrados_13-12-16.pdf,0,desktop:/minuta_2018_06_11.txt,0,desktop:/Dimensionamiento_Económico-Financiero_-_Grupo_14.xlsx,0,desktop:/backup-OpenWrt-2018-04-15.tar.gz,0,desktop:/perdida_retiros.ods,0

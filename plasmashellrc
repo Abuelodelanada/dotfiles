@@ -102,7 +102,7 @@ LaunchCounts=2 services_vlc.desktop,3 services_emacs25.desktop,3 services_org.kd
 pluginWhiteList=services,desktopsessions,PowerDevil,shell,bookmarks,baloosearch,locations
 
 [PlasmaTransientsConfig]
-PreloadWeight=42
+PreloadWeight[$d]
 
 [PlasmaViews][Panel 148][Horizontal1280]
 thickness=26

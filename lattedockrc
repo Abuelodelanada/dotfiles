@@ -1,18 +1,18 @@
 [Containments][13][General]
-advanced=true
-appletOrder=41;42
-disablePanelShadowForMaximized=true
-durationTime=None
-iconSize=26
-panelPosition=10
-panelSize=100
-shadowColor=ececec
-shadowOpacity=10
-shadowSize=5
-splitterPosition=2
-splitterPosition2=3
-titleTooltips=true
-zoomLevel=0
+advanced[$d]
+appletOrder[$d]
+disablePanelShadowForMaximized[$d]
+durationTime[$d]
+iconSize[$d]
+panelPosition[$d]
+panelSize[$d]
+shadowColor[$d]
+shadowOpacity[$d]
+shadowSize[$d]
+splitterPosition[$d]
+splitterPosition2[$d]
+titleTooltips[$d]
+zoomLevel[$d]
 
 [Containments][19][Applets][57][Configuration][Appearance]
 boldFontWeight[$d]
@@ -70,28 +70,43 @@ splitterPosition2[$d]
 titleTooltips[$d]
 zoomLevel[$d]
 
+[FileDialogSize]
+Height 800=480
+Width 1280=640
+
+[KFileDialog Settings]
+Recent Files[$e]=Unity.layout.latte,file:$HOME/desarrollo/dotfiles/Unity.layout.latte
+Recent URLs[$e]=file:$HOME/desarrollo/dotfiles/
+
 [PIMEventsPlugin]
 calendars=2983,2984,2986
 
 [PlasmaRunnerManager]
-LaunchCounts=1 services_org.kde.konsole.desktop,1 services_org.kde.spectacle.desktop
+LaunchCounts=1 services_org.kde.spectacle.desktop,1 services_thunderbird.desktop,1 services_org.kde.konsole.desktop,1 services_emacs.desktop
 pluginWhiteList=services,desktopsessions,PowerDevil,shell,bookmarks,baloosearch,locations
 
 [PlasmaTransientsConfig]
-PreloadWeight=42
-raiseOnActivityChange=false
-raiseOnDesktopChange=false
-timerHide=700
-timerShow=200
+PreloadWeight[$d]
+raiseOnActivityChange[$d]
+raiseOnDesktopChange[$d]
+timerHide[$d]
+timerShow[$d]
 
 [ScreenConnectors]
 10=LVDS-1
 11=DP-1
 
 [UniversalSettings]
+canDisableBorders=false
 currentLayout=Unity
+downloadWindowSize=800,550
 lastNonAssignedLayout=Unity
 launchers=file:///usr/share/applications/firefox.desktop,file:///usr/share/applications/org.kde.dolphin.desktop
-layoutsWindowSize=700,450
+layoutsColumnWidths=58,100,78,0
+layoutsWindowSize=700,550
+memoryUsage=0
+mouseSensitivity=2
+screenTrackerInterval=2500
 showInfoWindow=true
+unifiedGlobalShortcuts=true
 version=2
